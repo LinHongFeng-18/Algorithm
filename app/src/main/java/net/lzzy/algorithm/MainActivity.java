@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 displayItems(edtItems);
                 break;
             case R.id.activity_main_btn_sort:
-                directSort();
+                //directSort();
+                insertSort();
                 displayItems(tvResult);
                 break;
             default:
@@ -65,6 +66,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
 
+    }
+
+    private void insertSort(){
+        for(int i=1;i<items.length;i++){
+            int j=i-1;
+            if (items[j].compareTo(items[i])<0) {
+                continue;
+            }
+            Integer num=items[i];
+            while (j>=0&&items[j].compareTo(num)>0){
+                items[j+1]=items[j];
+                j--;
+        }items[j+1]=num;
+        }
     }
 
     private void generateItems() {
