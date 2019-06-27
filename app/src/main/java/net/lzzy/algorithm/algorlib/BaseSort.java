@@ -33,20 +33,6 @@ public abstract class BaseSort <T extends Comparable<? super T>>{
     }
 
 
-//    public void sort() {
-//        long a=System.currentTimeMillis();
-//        //todo:直接选择排序的具体实现
-//        for(int i = 0; i<items.length-1; i++){
-//            int num=i;
-//            for (int j=i+1;j<items.length;j++){
-//                if (bigger(items[num] , items[j])) {
-//                    num=j;
-//                }
-//            }
-//            swap(num,i);
-//        }
-//        duration=System.currentTimeMillis()-a;
-//    }
 
     public String getResult(){
          String display="";

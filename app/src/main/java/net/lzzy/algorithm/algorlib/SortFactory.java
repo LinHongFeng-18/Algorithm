@@ -15,16 +15,15 @@ public class SortFactory {
         switch (key) {
             case 0:
                 sort = new DirectSort<>(item);
-
                 break;
             case 1:
                 sort = new InsertSort<>(item);
-
-
                 break;
             case 2:
                 sort = new ShellSort<>(item);
-
+                break;
+            case 3:
+                sort=new BubbleSort<>(item);
                 break;
             default:
                 return null;
@@ -35,7 +34,7 @@ public class SortFactory {
 
 
         public static String[] getSortName(){
-        return new String[]{"插入排序","选择排序","希尔排序"};
+        return new String[]{"插入排序","选择排序","希尔排序","冒泡排序"};
     }
 
     }
